@@ -9,6 +9,7 @@ Les changements par rapport à la version précédente sont les suivants:
 -readonly imput box
 
 ----------------------------
+-
 pourquoi v7 sur la v8.v9?, car crée sur même base.
 problème résolu since v9:
 Le problème de la couleur qui ne fonctionne pas vient du fait que la fonction applyStyles() ne prend pas en compte la case color pour changer la couleur du texte. Il faut donc modifier la fonction applyStyles() dans le fichier script.js pour ajouter une condition qui vérifie si la case color est cochée, et appelle la fonction changeRGB() si c’est le cas. Voici le code modifié:
