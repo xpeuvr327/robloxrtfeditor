@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Test de texte riche</title>
+    <!-- Inclure le fichier script.js dans la balise <head> -->
+    <script src="script.js"></script>
+    <!-- Ajouter du style CSS pour rendre l'interface plus jolie -->
+    <style>
+      #input {
+        width: 300px;
+        height: 30px;
+        font-size: 20px;
+      }
+      #output {
+        width: 300px;
+        height: 100px;
+        font-size: 20px;
+      }
+      button {
+        width: 80px;
+        height: 40px;
+        font-size: 20px;
+      }
+      #color {
+        width: 300px;
+      }
+      #preview {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+      }
+      #red, #green, #blue {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Créer une entrée de texte pour saisir le texte à transformer -->
+    <input id="input" type="text" placeholder="Entrez du texte ici">
+    <!-- Créer des boutons pour appliquer les styles au texte -->
+    <button id="bold" onclick="applyStyle('bold')">Gras</button>
+    <button id="italic" onclick="applyStyle('italic')">Italique</button>
+    <button id="underline" onclick="applyStyle('underline')">Souligné</button>
+    <button id="strike" onclick="applyStyle('strike')">Barré</button>
+    <!-- Créer un curseur pour changer la couleur du texte -->
+    <input id="color" type="range" min="0" max="5" value="0" onchange="applyColor()">
+    <!-- Créer trois curseurs pour changer la couleur du texte en RGB -->
+    <input id="red" type="range" min="0" max="255" value="0" onchange="applyRGB()">
+    <input id="green" type="range" min="0" max="255" value="0" onchange="applyRGB()">
+    <input id="blue" type="range" min="0" max="255" value="0" onchange="applyRGB()">
+    <!-- Créer un carré pour afficher la couleur choisie -->
+    <div id="preview"></div>
+    <!-- Créer une zone de texte pour afficher le texte transformé -->
+    <textarea id="output" readonly></textarea>
+  </body>
+</html>
